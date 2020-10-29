@@ -157,6 +157,8 @@ header .img {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto auto;
+    min-height: 60vh;
+    align-items: center;
 }
 
 .company-wrapper div {
