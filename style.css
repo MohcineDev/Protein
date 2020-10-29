@@ -93,13 +93,20 @@ nav .links a:hover {
 
 /* NAV END */
 
+.header-container {
+    background: linear-gradient(30deg, var(--bl), var(--pu));
+}
+
 header {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     align-items: center;
+    justify-items: center;
+    height: 80vh;
 }
 
 .call-action {
-    width: 50%;
+    grid-column: 1/2;
 }
 
 .call-action h1 {
@@ -107,11 +114,12 @@ header {
 }
 
 header .img {
+    grid-column: 2/3;
     background-image: url("src/whey.png");
     background-position: center;
     background-repeat: no-repeat;
+    width: 100%;
     height: 80vh;
-    width: 50%;
 }
 
 .call-action button {
@@ -553,18 +561,32 @@ button:hover {
 }
 
 @media screen and (max-width:700px) {
-    .company-wrapper div{
+    .wrapper #scroll {
+        display: none;
+    }
+    header {
+        text-align: center;
+    }
+    .call-action {
+        grid-column: 1/3;
+    }
+    .call-action h1 {
+        font-size: 30px;
+    }
+    header .img {
+        display: none;
+    }
+    .company-wrapper div {
         padding: 20px;
     }
     .company-wrapper .video {
         grid-column: 1/3;
         grid-row: 1/2;
     }
-    .company-wrapper .company-desc h2{
+    .company-wrapper .company-desc h2 {
         text-align: center;
-
-            }
-                    .company-wrapper .company-desc {
+    }
+    .company-wrapper .company-desc {
         grid-column: 1/3;
         grid-row: 2/3;
     }
