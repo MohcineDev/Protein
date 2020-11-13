@@ -22,7 +22,6 @@ document.addEventListener('scroll', () => {
 
     if (scrollY >= height * 2) {
         scrollTop.style.display = 'block'
-
     }
     else
         scrollTop.style.display = 'none'
@@ -81,10 +80,10 @@ window.addEventListener('resize', () => {
         display.style.display = 'none'
         hide.style.display = 'none'
     }
-    else{
+    else {
         display.style.display = 'block'
-
+        hide.style.display = 'none'
+        links.style.right = '-100%'
     }
-
 
 })
