@@ -54,12 +54,17 @@ display.addEventListener('click', function () {
     this.style.display = 'none'
     hide.style.display = 'block'
     links.style.right = '0px'
+    this.style.animation = 'rotate .5s ease-out';
+    hide.style.animation = 'rotate .5s ease-out';
 })
 
 const hideBtn = () => {
-    hide.style.display = 'none'
-    display.style.display = 'block'
-    links.style.right = '-100%'
+
+    if (this.innerWidth <= 768) {
+        hide.style.display = 'none'
+        display.style.display = 'block'
+        links.style.right = '-100%'
+    }
 }
 
 hide.addEventListener('click', function () {
