@@ -7,7 +7,7 @@ const hide = document.querySelector('#hide')
 const links = document.querySelector('.links')
 
 const height = innerHeight
-
+const year = document.querySelector('#year')
 
 scrollDown.addEventListener('click', () => {
 
@@ -15,7 +15,7 @@ scrollDown.addEventListener('click', () => {
         top: height,
         behavior: "smooth"
     })
-    scrollDown.style.display = 'none'
+    // scrollDown.style.display = 'none'
 })
 
 document.addEventListener('scroll', () => {
@@ -92,3 +92,6 @@ window.addEventListener('resize', () => {
     }
 
 })
+
+
+year.textContent = new Date().getFullYear()
