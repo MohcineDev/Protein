@@ -1,11 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
 /* deafult */
 
-* {
+:root {
     --col: rgb(7, 98, 179);
     --bl: #70bcdd;
-    font-family: Karla,Arial, Helvetica, sans-serif;
     --pu: #b49eff;
+}
+
+* {
+    font-family: Karla, Arial, Helvetica, sans-serif;
 }
 
 *::selection {
@@ -436,6 +439,11 @@ footer .community {
     font-size: 15px;
     box-sizing: border-box;
     border-radius: 4px;
+    transition: border-color 0.3s;
+}
+
+.community input[type="email"]:hover {
+    border-color: #486eb4;
 }
 
 footer .community input::placeholder {
@@ -465,6 +473,11 @@ footer .community .socials svg {
 
 footer .community .socials svg .cls-1 {
     fill: rgb(42, 139, 225);
+    transition: fill 0.5s;
+}
+
+footer .community .socials svg:hover .cls-1 {
+    fill: rgb(29, 100, 162);
 }
 
 footer .community .socials svg .cls-2, .cls-4 {
@@ -520,11 +533,12 @@ button:hover {
     cursor: pointer;
     display: none;
 }
-@keyframes rotate{
+
+@keyframes rotate {
     0% {
         transform: rotate(0deg);
         fill: red !important;
-    } 
+    }
     100% {
         transform: rotate(360deg);
     }
@@ -685,7 +699,7 @@ button:hover {
     footer .community {
         grid-area: 3/1/4/13;
     }
-    .company .mail{
+    .company .mail {
         width: 80%;
     }
     .company .mail input, .company .mail button {
@@ -693,7 +707,7 @@ button:hover {
         box-sizing: border-box;
         width: 100%;
     }
-    .company .mail button{
+    .company .mail button {
         margin-top: 10px;
     }
 }
