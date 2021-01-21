@@ -1,43 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
-/* deafult */
-
-:root {
-    --col: rgb(7, 98, 179);
-    --bl: #70bcdd;
-    --pu: #b49eff;
-}
-
-* {
-    font-family: Karla, Arial, Helvetica, sans-serif;
-}
-
-*::selection {
-    background-color: var(--bl);
-}
-
-body {
-    margin: 0;
-    color: #fff;
-    position: relative;
-    overflow-x: hidden;
-}
-
-svg {
-    cursor: pointer;
-    width: 40px;
-}
-
-a {
-    color: #fff;
-    text-decoration: none;
-}
-
-button {
-    cursor: pointer;
-}
-
-/*END deafult */
-
 .container {
     height: 100vh;
     background: linear-gradient(30deg, var(--bl), var(--pu));
@@ -48,19 +8,15 @@ button {
     background: linear-gradient(-30deg, var(--pu), var(--bl));
 }
 
-.wrapper {
-    width: 80%;
-    margin: 0 auto;
-}
 
-@keyframes backdiv {
+@keyframes down-animation {
     50% {
         bottom: 20px;
     }
 }
 
-.back {
-    animation-name: backdiv;
+.down {
+    animation-name: down-animation;
     animation-duration: 2s;
     animation-iteration-count: infinite;
     bottom: 40px;
@@ -71,35 +27,6 @@ button {
     left: calc(50% - 40px);
     bottom: 40px;
 }
-
-nav {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 15px 5px 0 5px;
-}
-
-nav .logo a {
-    display: flex;
-    align-items: center;
-}
-
-nav .logo a span {
-    font-size: 35px;
-    margin-left: 10px;
-}
-
-nav .links a {
-    margin-left: 25px;
-}
-
-nav .links a:hover {
-    transition: .5s;
-    color: #99e0ff;
-}
-
-/* NAV END */
 
 .header-container {
     background: linear-gradient(30deg, var(--bl), var(--pu));
@@ -211,10 +138,6 @@ header .img {
     width: 240px;
 }
 
-.company .mail input::placeholder {
-    color: #a9a9a9;
-}
-
 .company .mail button {
     background-color: rgb(42, 139, 225);
     color: #eee;
@@ -260,7 +183,7 @@ header .img {
 }
 
 .categories {
-    display: flex;
+    /* display: flex; */
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
@@ -276,10 +199,11 @@ header .img {
 }
 
 .categories .row .box {
-    margin: 15px;
+    margin: 15px 5px;
     padding: 10px;
     border-radius: 10px;
     border: 2px solid #eee;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 200 200'%3E%3Cpolygon fill='rgba(42, 139, 225,0.2)' points='100 0 0 100 100 100 100 200 200 100 200 0'/%3E%3C/svg%3E");
 }
 
 .categories .box img {
@@ -392,112 +316,6 @@ header .img {
 
 /* END services */
 
-/* FOOTER */
-
-.footer-container {
-    background: linear-gradient(15deg, var(--bl), var(--pu));
-    padding: 30px 0;
-}
-
-footer {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(3, auto);
-    gap: 5px;
-}
-
-footer p:nth-child(1) {
-    font-size: 20px;
-    font-weight: 600;
-    color: var(--col);
-}
-
-footer p {
-    text-transform: capitalize;
-}
-
-footer .info {
-    grid-area: 1/1/2/4;
-}
-
-footer .about {
-    grid-area: 1/4/2/7;
-}
-
-footer .contact {
-    grid-area: 1/7/2/10;
-}
-
-footer .community {
-    grid-area: 1/10/2/13;
-}
-
-.community button, .community input {
-    border: 1px solid white;
-    width: 90%;
-    padding: 8px 15px;
-    font-size: 15px;
-    box-sizing: border-box;
-    border-radius: 4px;
-    transition: border-color 0.3s;
-}
-
-.community input[type="email"]:hover {
-    border-color: #486eb4;
-}
-
-footer .community input::placeholder {
-    color: #a9a9a9;
-}
-
-footer .community button {
-    background-color: rgb(42, 139, 225);
-    color: #eee;
-    letter-spacing: 1px;
-    font-weight: 600;
-    margin: 10px 0;
-    font-family: Arial, Helvetica, sans-serif;
-    display: block;
-}
-
-footer .community .socials {
-    display: flex;
-    width: 90%;
-    justify-content: space-evenly;
-    margin-top: 10px;
-}
-
-footer .community .socials svg {
-    width: 30px;
-}
-
-footer .community .socials svg .cls-1 {
-    fill: rgb(42, 139, 225);
-    transition: fill 0.5s;
-}
-
-footer .community .socials svg:hover .cls-1 {
-    fill: rgb(29, 100, 162);
-}
-
-footer .community .socials svg .cls-2, .cls-4 {
-    fill: #fff;
-}
-
-.footer-wrapper>p {
-    margin: 0;
-    margin-top: 20px;
-    padding: 20px;
-    text-align: center;
-    color: rgb(44, 89, 107);
-}
-
-.footer-wrapper p a {
-    color: rgb(44, 89, 107);
-    text-decoration: underline;
-}
-
-/* END FOOTER */
 
 /* SCROLL TO TOP BTN  */
 
@@ -527,22 +345,6 @@ button:hover {
     background-color: rgb(42, 139, 225);
 }
 
-.move {
-    width: 25px;
-    height: 25px;
-    cursor: pointer;
-    display: none;
-}
-
-@keyframes rotate {
-    0% {
-        transform: rotate(0deg);
-        fill: red !important;
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-}
 
 /* MEDIA QUERY */
 
@@ -550,15 +352,26 @@ button:hover {
     .wrapper {
         width: 90%;
     }
+    .categories .row {
+        flex-wrap: wrap;
+    }
     .categories .row .box {
-        padding: 10px;
+        margin: 15px 5px;
     }
     .company-desc p {
         width: 100%;
     }
 }
 
+/* Large devices  */
+
 @media screen and (max-width:950px) {
+    .container-product .wrapper {
+        width: 80%;
+    }
+    .categories .row .box {
+        margin: 15px;
+    }
     header .img {
         background-size: cover;
     }
@@ -593,7 +406,7 @@ button:hover {
     #display {
         display: block;
     }
-    .move {
+    .nav-controll {
         position: fixed;
         top: 20;
         right: 20px;

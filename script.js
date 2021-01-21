@@ -2,12 +2,9 @@ const scrollDown = document.querySelector('#scroll')
 const scrollTop = document.querySelector('#scroll-top')
 const mail = document.querySelectorAll('#mail')
 
-const display = document.querySelector('#display')
-const hide = document.querySelector('#hide')
 const links = document.querySelector('.links')
 
 const height = innerHeight
-const year = document.querySelector('#year')
 
 scrollDown.addEventListener('click', () => {
 
@@ -49,6 +46,9 @@ mail.forEach(item => {
     })
 });
 
+btn.addEventListener('click', () => {
+    console.log(123);
+})
 
 display.addEventListener('click', function () {
     this.style.display = 'none'
@@ -93,5 +93,3 @@ window.addEventListener('resize', () => {
 
 })
 
-
-year.textContent = new Date().getFullYear()
