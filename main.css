@@ -4,7 +4,9 @@
 :root {
     --col: rgb(7, 98, 179);
     --bl: #70bcdd;
-    --pu: #b49eff;
+    --pu: #b49eff;  
+    /* --bl: #313131;
+    --pu: #200200; */
 }
 
 * {
@@ -26,7 +28,9 @@ svg {
     cursor: pointer;
     width: 40px;
 }
-
+h1{
+    margin: 2rem 0;
+}
 a {
     color: #fff;
     text-decoration: none;
@@ -99,7 +103,6 @@ nav .links a:hover {
 
 /* NAV END */
 
-
 .wrapper {
     width: 80%;
     margin: 0 auto;
@@ -109,7 +112,7 @@ nav .links a:hover {
 
 .footer-container {
     background: linear-gradient(15deg, var(--bl), var(--pu));
-    padding: 30px 0;
+    padding: 20px 0;
 }
 
 footer {
@@ -125,8 +128,16 @@ footer p:nth-child(1) {
     color: var(--col);
 }
 
+/* //remove */
+
 footer p {
     text-transform: capitalize;
+}
+
+footer a {
+    text-transform: capitalize;
+    display: block;
+    margin: 1rem 0;
 }
 
 footer .info {
@@ -147,7 +158,7 @@ footer .community {
 
 .community button, .community input {
     border: 1px solid white;
-    width: 90%;
+    width: 100%;
     padding: 8px 15px;
     font-size: 15px;
     box-sizing: border-box;
@@ -194,7 +205,7 @@ footer .community .socials svg .cls-2, .cls-4 {
 
 .footer-wrapper>p {
     margin: 0;
-    margin-top: 3rem;
+    margin-top: 1.5rem;
     padding: 1rem;
     text-align: center;
     color: rgb(44, 89, 107);
@@ -211,8 +222,6 @@ footer .community .socials svg .cls-2, .cls-4 {
 
 /* END FOOTER */
 
-
-
 /* MEDIA QUERY */
 
 @media screen and (max-width:1200px) {
@@ -221,4 +230,73 @@ footer .community .socials svg .cls-2, .cls-4 {
     }
 }
 
-/* // TODO : add footer responsiveness */
+/* Medium devices */
+
+@media screen and (max-width:768px) {
+    #display {
+        display: block;
+    }
+    .nav-controll {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        z-index: 10;
+        background-color: rgba( 35, 64, 10, .2);
+        padding: 5px;
+        border-radius: 50%;
+    }
+    .links {
+        position: fixed;
+        background: linear-gradient(15deg, var(--bl), var(--pu));
+        top: 0;
+        right: -100%;
+        width: 100%;
+        height: 100vh;
+        text-align: center;
+        padding-top: 60px;
+        transition: all .5s;
+        z-index: 8;
+    }
+    nav .links a {
+        display: block;
+        padding: 30px 0;
+        margin-left: 0px;
+        font-size: 20px;
+    }
+    nav .links a:hover {
+        background: linear-gradient(-15deg, #486eb4, #866fd3);
+        color: #fff;
+    }
+    footer div {
+        text-align: center;
+    }
+    footer .info {
+        grid-area: 1/1/2/7;
+    }
+    footer .about {
+        grid-area: 1/7/2/13;
+    }
+    footer .contact {
+        grid-area: 2/1/3/7;
+    }
+    footer .community {
+        grid-area: 2/7/3/13;
+    }
+}
+
+/* Extra small devices */
+
+@media screen and (max-width: 600px) {
+    footer .info {
+        grid-area: 1/1/2/7;
+    }
+    footer .about {
+        grid-area: 1/7/2/13;
+    }
+    footer .contact {
+        grid-area: 2/1/3/13;
+    }
+    footer .community {
+        grid-area: 3/1/4/13;
+    }
+}
