@@ -10,10 +10,11 @@ body {
 
 .email {
     text-align: left;
-    margin: 2rem 0;
     background-color: rgba(255, 255, 250, 0.5);
     padding: 1rem;
     border-radius: 5px;
+    max-width: 900px;
+    margin: 5rem auto;
 }
 
 .email p:nth-of-type(1) {
