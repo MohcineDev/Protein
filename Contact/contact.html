@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="../src/icon.png" />
+    <link rel="icon" href="../src/fav.webp" />
     <title>Protein</title>
     <link rel="stylesheet" href="../main.css">
     <link rel="stylesheet" href="style.css">
@@ -16,7 +16,7 @@
             <nav>
                 <div class="logo">
                     <a href="/">
-                        <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45 45">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45 45">
                             <title>logo</title>
                             <path
                                 d="M22.5,43.86,4,33.18V11.82L22.5,1.14,41,11.82V33.18ZM6,32l16.5,9.52L39,32V13L22.5,3.45,6,13Z"
@@ -65,12 +65,13 @@
 
             <form>
                 <div class="row">
-                    <input type="text" placeholder="Full Name" id="">
-                    <input type="email" placeholder="Your Email" id="">
+                    <input type="text" placeholder="Full Name" maxlength="30" required data-name="Full Name" id="field">
+                    <input type="email" maxlength="30" required placeholder="Your Email" data-name="Your Email" id="field">
                 </div>
-                <input type="text" maxlength="100" placeholder="Subject">
-                <textarea name="" placeholder="Your Message" cols="30" rows="10"></textarea>
+                <input type="text" maxlength="100" required placeholder="Subject" data-name="Subject" id="field">
+                <textarea placeholder="Your Message" required cols="30" rows="10" data-name="Your Message" id="field"></textarea>
                 <input type="submit" value="Send">
+                <input type="button" value="Cancel">
             </form>
         </div>
     </div>
@@ -97,7 +98,7 @@
                     <div class="contact">
                         <p>Contact us</p>
                         <p>+ 212 0123456789</p>
-                        <p>protein@mail.com</p>
+                        <p><a href="mailto:mouhcinedev@mail.com">mouhcinedev@mail.com</a></p>
                         <p>Street 01 N 16 - B 20</p>
                     </div>
                     <div class="community">
@@ -112,8 +113,7 @@
                                     </path>
                                 </svg>
                             </a>
-                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 50 50">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
                                 <title>Twitter</title>
                                 <path class="cls-1" d="M50,25A25,25,0,1,1,25,0,25,25,0,0,1,50,25Z" />
                                 <path class="cls-2"
@@ -121,7 +121,7 @@
                             </svg>
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
                                 <title>instagram</title>
-                                <g id="Layer_2" data-name="Layer 2">
+                                <g>
                                     <circle class="cls-1" cx="25" cy="25" r="25" />
                                     <rect class="cls-2"
                                         style="stroke-width: 3px; fill: none; stroke: #fff; stroke-miterlimit: 10;"
@@ -132,8 +132,7 @@
                                     <circle class="cls-4" cx="35.5" cy="14.5" r="1.5" />
                                 </g>
                             </svg>
-                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 50 50">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
                                 <title>Youtube</title>
                                 <path class="cls-1" d="M50,25A25,25,0,1,1,25,0,25,25,0,0,1,50,25Z" />
                                 <path class="cls-2"
@@ -142,13 +141,13 @@
                         </div>
                     </div>
                 </footer>
-                <p data-name="test">Developed By <a data-name="test" href="https://github.com/MohcineDev"
-                        target="_blank" title="GitHub Username">MohcineDev</a> &copy; <span data-name="test"
-                        id="year">2020</span></p>
+                <p>Developed By <a href="https://github.com/MohcineDev" target="_blank"
+                        title="GitHub Username">MohcineDev</a> &copy; <span id="year"></span></p>
             </div>
         </div>
     </div>
     <script src="../main.js"></script>
+    <script src="./contact.js"></script>
 </body>
 
 </html>

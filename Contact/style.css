@@ -10,7 +10,14 @@ body {
 
 .email {
     text-align: left;
-    margin: 2rem 0;  
+    margin: 2rem 0;
+    background-color: rgba(255, 255, 250, 0.5);
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.email p:nth-of-type(1) {
+    color: #444 !important;
 }
 
 .email p:nth-of-type(2) {
@@ -22,9 +29,12 @@ body {
 }
 
 form {
-    width: 100%;
-    margin: auto;
+    max-width: 900px;
+    margin: 5rem auto;
     padding: 2rem 0;
+    color: #fff !important;
+    box-shadow: 0 0 5px #ddd;
+    border-radius: 1rem;
 }
 
 form .row {
@@ -34,16 +44,19 @@ form .row {
     margin: 0 auto;
 }
 
-input, textarea {
-    color: #101020;
-    background-color: #fff;
-    border: 1px solid var(--col);
+form input, form textarea {
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid var(--col);
     padding: 0.5rem;
-    width: 50%;
     box-sizing: border-box;
     margin: 0.5rem 0;
-    border-radius: 5px;
+    /* border-radius: 5px; */
     font-size: 1rem;
+}
+
+form input::placeholder, form textarea::placeholder {
+    color: white;
 }
 
 .row input {
@@ -59,16 +72,17 @@ textarea {
     width: 90%;
 }
 
-form input[type="submit"] {
-    background-color: var(--col);
+form input[type="submit"], form input[type="button"] {
     font-size: 1.2rem;
     color: #fff;
     cursor: pointer;
-    width: 50%;
+    width: 20%;
     transition: 0.5s;
     letter-spacing: 2px;
+    border-radius: 5px;
+    border: 1px #fff dashed;
 }
 
-form input[type="submit"]:hover {
-    border-color: #fff;
+form input[type="submit"]:hover, form input[type="button"]:hover {
+    background-color: var(--col);
 }

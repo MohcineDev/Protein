@@ -49,7 +49,7 @@ header {
 
 header .img {
     grid-column: 2/3;
-    background-image: url("src/whey.png");
+    background-image: url("src/whey.webp");
     background-position: center;
     background-repeat: no-repeat;
     width: 100%;
