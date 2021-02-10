@@ -3,6 +3,20 @@ const display = document.querySelector('#display')
 const hide = document.querySelector('#hide')
 const YEAR = document.querySelector('#year')
 const links = document.querySelector('.links')
+const mail = document.querySelectorAll('#mail')
+
+// hide the placeholder when mouse click - enter - focus
+mail.forEach(item => {
+
+    item.addEventListener('focus', () => {
+        item.setAttribute('placeholder', '')
+    })
+
+    item.addEventListener('blur', () => {
+        item.setAttribute('placeholder', 'Your Email ...')
+    })
+});
+
 
 display.addEventListener('click', function () {
     this.style.display = 'none'

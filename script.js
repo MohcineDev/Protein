@@ -1,6 +1,5 @@
 const scrollDown = document.querySelector('#scroll')
 const scrollTop = document.querySelector('#scroll-top')
-const mail = document.querySelectorAll('#mail')
 const height = innerHeight
 
 scrollDown.addEventListener('click', () => {
@@ -29,18 +28,3 @@ scrollTop.addEventListener('click', () => {
     })
 
 })
-
-// hide the placeholder when mouse click - enter - focus
-mail.forEach(item => {
-
-    item.addEventListener('focus', () => {
-        item.setAttribute('placeholder', '')
-    })
-
-    item.addEventListener('blur', () => {
-        item.setAttribute('placeholder', 'Your Email ...')
-    })
-});
- 
-
-

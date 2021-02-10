@@ -3,8 +3,8 @@
 
 :root {
     --col: rgb(7, 98, 179);
-     --bl: #70bcdd;
-    --pu: #b49eff;  
+    --bl: #70bcdd;
+    --pu: #b49eff;
 }
 
 * {
@@ -16,9 +16,11 @@
 *::selection {
     color: transparent;
 }
-html{
+
+html {
     scroll-behavior: smooth;
 }
+
 body {
     margin: 0;
     position: relative;
@@ -29,12 +31,14 @@ svg {
     cursor: pointer;
     width: 40px;
 }
-h1{
+
+h1 {
     margin: 2rem 0;
 }
+
 a {
     color: #fff;
-    text-decoration: none ;
+    text-decoration: none;
 }
 
 p {
@@ -45,7 +49,7 @@ button {
     cursor: pointer;
 }
 
-footer input[type="email"] {
+input[type="email"] {
     color: #101020;
 }
 
@@ -90,7 +94,7 @@ nav .links a:hover {
 }
 
 .nav-controll path {
-    fill: rgb(125, 25, 247);
+    fill: rgb(248, 154, 167);
 }
 
 @keyframes rotate {
@@ -152,7 +156,8 @@ footer .about {
 footer .contact {
     grid-area: 1/7/2/10;
 }
-footer .contact p a{
+
+footer .contact p a {
     text-decoration: none;
 }
 
