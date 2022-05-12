@@ -6,6 +6,7 @@ body {
     background: linear-gradient(-30deg, var(--pu), var(--bl));
     text-align: center;
     position: relative;
+    padding-bottom: 5rem;
 }
 
 .email {
@@ -14,6 +15,7 @@ body {
     padding: 1rem;
     border-radius: 5px;
     max-width: 900px;
+    box-sizing: border-box;
     margin: 5rem auto;
 }
 
@@ -21,7 +23,7 @@ body {
     color: #444 !important;
 }
 
-.email p:nth-of-type(2) {
+.email a {
     background-color: var(--col);
     display: inline-block;
     padding: 0.6rem 1rem;
@@ -34,11 +36,11 @@ form {
     margin: 5rem auto;
     padding: 2rem 0;
     box-shadow: 0 0 5px #ddd;
-    border-radius: 1rem;
+    border-radius: 5px;
+    background: rgba(255,255,255,0.1);
 }
 form input{
     color: #fff !important;
-
 }
 
 form .row {
@@ -61,6 +63,7 @@ form input, form textarea {
 
 form input::placeholder, form textarea::placeholder {
     color: white;
+    opacity: 0.8;
 }
 
 .row input {
@@ -85,6 +88,8 @@ form input[type="submit"] {
     letter-spacing: 2px;
     border-radius: 5px;
     border: 1px #fff dashed;
+    margin-bottom: 0;
+    margin-top: 1.5rem;
 }
 
 form input[type="submit"]:hover {
