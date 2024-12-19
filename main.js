@@ -61,3 +61,21 @@ window.addEventListener('resize', () => {
 })
 
 YEAR.textContent = new Date().getFullYear()
+
+let elems = document.querySelectorAll(".to-observe")
+
+const options = {
+    threshold: 0.6,
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(elem => {
+        if (elem.isIntersecting) {
+            elem.target.classList.add('appear')
+            observer.unobserve(elem.target)
+        }
+    })
+}, options);
+
+elems.forEach(elem => observer.observe(elem)
+)

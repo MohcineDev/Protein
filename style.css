@@ -30,6 +30,11 @@
 .header-container {
     background: linear-gradient(30deg, var(--bl), var(--pu));
 }
+.to-observe{
+    transform: translateY(200px);
+    transition: all 0.5s;
+    opacity: 0;
+}
 
 header {
     display: grid;
@@ -37,10 +42,17 @@ header {
     align-items: center;
     justify-items: center;
     height: 80vh;
+   
 }
 
 .call-action {
     grid-column: 1/2;
+
+}
+.appear{
+    transform : translateY(0px);
+    color : red;
+    opacity: 1;
 }
 
 .call-action h1 {
